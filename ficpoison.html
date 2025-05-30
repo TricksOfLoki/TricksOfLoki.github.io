@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="res/ficpoison.js"></script>
+    <title>Fic Poisoner</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Fic Poisoner</h1>
+    </div>
+    <div class="form-container">
+        <div class="dual-text">
+            <textarea name="input" id="input" placeholder="Paste your HTML-formatted fic here" autofocus></textarea>
+            <textarea name="output" is="output" placeholder="Click the button to generate your poisoned fic here" readonly></textarea>
+        </div>
+        <div class="poison-options">
+            <div>
+                <label>Poison type:</label>
+                <br>
+                <input type="radio" id="default" name="poison-type">
+                <label for="default">Default</label>
+                <br>
+                <input type="radio" id="tame" name="poison-type">
+                <label for="tame">Tame</label>
+            </div>
+            <div>
+                <input type="checkbox" name="custom-class-check" id="custom-class-check">
+                <label for="custom-class-check">Use custom CSS class name</label>
+                <br>
+                <label for="poison-name">Class name:</label>
+                <input type="text" id="poison-name">
+            </div>
+        </div>
+        <button>Add Poison</button>
+    </div>
+    <div class="main">
+        <p>Sick and tired of hearing about AI scraping Ao3?  Want to try and fight back?  Try this.</p>
+    </div>
+</body>
+</html>
