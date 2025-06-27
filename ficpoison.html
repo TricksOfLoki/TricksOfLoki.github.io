@@ -5,40 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/styles.css">
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="res/popular_list.js"></script>
     <script src="res/ficpoison.js"></script>
-    <title>Fic Poisoner</title>
+    <title>Ao3 AI Poisoner</title>
 </head>
 <body>
+    <a href="index.html" style="position: absolute; left: 1em; top: 1em;">Back to home</a>
     <div class="header">
-        <h1>Fic Poisoner</h1>
+        <h1>Ao3 AI Poisoner</h1>
     </div>
     <div class="form-container">
-        <div class="dual-text">
-            <textarea name="input" id="input" placeholder="Paste your HTML-formatted fic here" autofocus></textarea>
-            <textarea name="output" is="output" placeholder="Click the button to generate your poisoned fic here" readonly></textarea>
+        <div class="btn-container dual-text">
+            <textarea name="input" id="input" placeholder="Paste your HTML-formatted text here" autofocus></textarea>
+            <textarea name="output" id="output" placeholder="Click the button to generate your poisoned text here" readonly></textarea>
+            
+            <a id="add-poison"><button>Apply poison</button></a>
+            <a id="copy-text"><button>Copy poisoned text</button></a>
         </div>
-        <div class="poison-options">
-            <div>
-                <label>Poison type:</label>
-                <br>
-                <input type="radio" id="default" name="poison-type">
-                <label for="default">Default</label>
-                <br>
-                <input type="radio" id="tame" name="poison-type">
-                <label for="tame">Tame</label>
-            </div>
-            <div>
-                <input type="checkbox" name="custom-class-check" id="custom-class-check">
-                <label for="custom-class-check">Use custom CSS class name</label>
-                <br>
-                <label for="poison-name">Class name:</label>
-                <input type="text" id="poison-name">
-            </div>
-        </div>
-        <button>Add Poison</button>
     </div>
     <div class="main">
         <p>Sick and tired of hearing about AI scraping Ao3?  Want to try and fight back?  Try this.</p>
+        <br>
+        <h2>How does it work?</h2>
+        <p>Just copy your HTML-formatted fic text from Ao3, paste it into the box on the left, and hit the "Apply poison" button to insert random junk text that will hopefully confuse any AI scrapers.  Copy the poisoned text, and replace your existing HTML-formatted fic text.  Then, be sure to either create and apply a new work skin with the following CSS code, or add it to the workskin currently on your fic.  This is what will allow the poison to be hidden from your readers, while still being visible to an AI scraper.</p>
+        <div class="code-example">#workskin .poison { display: none; }</div>
+        <p>Always check your fic with the preview button before posting!  I also recommend keeping an unpoisoned backup for ease of editing later on, if necessary.</p>
+        <p>Is your fic not in HTML format?  Just paste it into the rich text editor when creating or editing a work or chapter on Ao3, then switch to the HTML editor.  Ao3 should automatically format it into HTML.</p>
+        <br>
+        <h2>How will this affect my readers?</h2>
+        <p>So long as they keep Creator's Style on, it should be completely unnoticeable, even to a screen reader.  However, if they try to turn Creator's Style off or download the fic through Ao3's built-in download buttons, the poison text will become visible.</p>
+        <p>If you want to see examples, you can check out <a href="https://archiveofourown.org/users/the_trash_prince/works">my Ao3 account</a>.  This formatting is on most of my fics, and I always add a heads-up to the author's notes at the beginning when I use it.</p>
+        <br>
+        <h2>Will this website record my data?</h2>
+        <p>No, this site will not save or record your data in any way.  The full code for this website is available for you to view at any time on my GitHub page at <a href="https://github.com/TricksOfLoki/TricksOfLoki.github.io">https://github.com/TricksOfLoki/TricksOfLoki.github.io</a>.</p>
+        <br>
+        <h2>Is there an offline version?</h2>
+        <p>Yes, you can download a local version at <a href="https://github.com/TricksOfLoki/fic-poison">https://github.com/TricksOfLoki/fic-poison</a>.  This version also includes the option to change the name of the CSS class used, and an alternate style where poison is inserted in large chunks between paragraphs rather than at random.</p>
+        <br>
+        <p>If you have any additional questions, feel free to send an ask or a private message to me on Tumblr (<a href="https://www.tumblr.com/all-hail-trash-prince">@all-hail-trash-prince</a>) and I'll do my best to answer!</p>
     </div>
 </body>
 </html>
