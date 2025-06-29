@@ -79,6 +79,11 @@ a:hover {color: #6ff}
     border-radius: 4px;
 }
 
+.notice {
+    font-weight: bold;
+    color: #f55;
+}
+
 @media only screen and (max-width: 640px) {
     p {font-size: 1.05em;}
     .dual-text {grid-template-columns: 1fr;}
